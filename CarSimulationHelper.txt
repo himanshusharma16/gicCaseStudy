@@ -1,0 +1,29 @@
+Hello,
+
+This solution works in line with the requirements mentioned in the document. I designed 2 solutions with different approaches in mind.
+
+1st is using the M X N board to move cars and check if the board already contains a car at a location to check for collision. I am using a visited set to keep track of cars that have already moved in the current step. If another car is already present at the current position and is present in the visited set too, it marks a collision.
+
+2nd approach is commented in the Simulator class and uses a hashmap to keep track of cars and their respective locations. I am using a position class as key to have a list of cars as values. But due to time constraint I couldn’t handle all the edge cases hence commented it out. In this approach process stops the moment it recognises a collision and doesn’t move forward. Please feel free to refer to the code to deep dive on this.
+
+Both approaches use O(steps X cars) time complexity to run in worst case.
+
+Assumptions - 
+I have taken below assumptions while designing the first solution from above-
+1 - Once cars crash on a particular step, they are then removed and the process continues for other cars.
+2 - The length of commands can vary for different cars. In such case, the cars whose commands end before others are kept parked at their last locations and can still cause a collision if any other car comes to their co-ordinates.
+3 - I have used maven for build and added Junit dependencies in order to create test cases for Simulator class.
+4 - Java version 17 or above will be present at your end to run the solution seamlessly.
+
+
+The zipped file already contains all the class files that would be required to run it. It works well with Windows or Mac operating systems and doesn’t need anything other than Java v 17+. May need to install J-unit if you want to run test cases from command line.
+
+I am using a maven project build with Java 17. Please import the project on IntelliJ / Eclipse as a maven project and build it. Easier to run the functionality and test cases from there and even check coverage for files. Just navigate to the file CarSimulation.java and run the main method to start the program.
+
+In order to run the project from command line, unzip the zipped file. Open command line.
+Go to folder where you unzipped the project. You should see a folder with name “CarSimulation”. As the files are already compiled, we don’t need to recompile them again to run.
+
+Run-   cd CarSimulation/out/production/CarSimulation/main/java
+Run-   java carSimulation.CarSimulation
+
+You should start seeing the statements as per the document provided. Enjoy!!
